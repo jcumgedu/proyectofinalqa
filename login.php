@@ -9,7 +9,7 @@
 <body class="body5">
 	<center>
 		<form action="validarLogin.php" method="post">
-			<h1 class="h1_style">BIENVENIDO AL SISTEMA DE GESTION ACADEMICAS</h1>
+			<h1 class="h1_style">BIENVENIDO AL SISTEMA DE GESTION ACADEMICA</h1>
             <img src="./Imagenes/graduado.png" class="img_style">
                 <table class="table_style" cellspacing="20px">
                     <tr>
