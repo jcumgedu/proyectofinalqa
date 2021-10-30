@@ -42,7 +42,12 @@ stages:
       workingDirectory: $(rootFolder)
       displayName: 'Use PHP version $(phpVersion)'
 
-    - script: composer install --no-interaction --working-dir='$(system.defaultWorkingDirectory)/pkgs'
+    - script: |
+       composer self-update 
+       composer dump-autoload
+       composer install --no-interaction --prefer-dist
+       displayName: 'Install Composer'
+
       
 
     - task: ArchiveFiles@2
