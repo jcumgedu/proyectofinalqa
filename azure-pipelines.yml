@@ -47,12 +47,10 @@ stages:
       workingDirectory: $(rootFolder)
       displayName: 'Composer install'
 
-    - script: sudo chmod 0755 phpunit
-      displayName: 'Make phpunit script runnable'
       
-    - script: phpunit
+    - script: /usr/local/bin/composer/phpunit
       displayName: 'Run tests with phpunit'
-      continueOnError: true
+
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
