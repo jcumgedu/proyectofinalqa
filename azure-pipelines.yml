@@ -47,6 +47,9 @@ stages:
       workingDirectory: $(rootFolder)
       displayName: 'Composer install'
 
+    - script: ./phpunit
+      displayName: 'Correr Pruebas unitarias con phpunit'
+
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
