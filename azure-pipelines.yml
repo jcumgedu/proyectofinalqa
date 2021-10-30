@@ -42,15 +42,8 @@ stages:
       workingDirectory: $(rootFolder)
       displayName: 'Use PHP version $(phpVersion)'
 
-    - script: curl -sS https://getcomposer.org/installer | php
-    - script: mv composer.phar /usr/local/bin/composer
-      workingDirectory: $(rootFolder)
-      displayName: 'Composer install'
-
+    - script: composer install --no-interaction --working-dir='$(system.defaultWorkingDirectory)/pkgs'
       
-    - script: /usr/local/bin/composer/phpunit
-      displayName: 'Run tests with phpunit'
-
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
