@@ -45,8 +45,8 @@ stages:
     - script: |
        sudo composer self-update
        composer install --no-interaction --prefer-dist --no-suggest
-       composer --version
-       displayName: 'Install Composer'
+       composer --2.1.10
+      displayName: 'Installing Package Dependencies'
 
       
 
