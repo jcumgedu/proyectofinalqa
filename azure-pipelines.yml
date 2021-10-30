@@ -45,7 +45,7 @@ stages:
     - script: |
        sudo composer self-update
        composer install --no-interaction --prefer-dist --no-suggest
-       composer --2.0.2
+       composer --3
        displayName: 'Install Composer'
 
       
