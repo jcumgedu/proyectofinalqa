@@ -8,7 +8,7 @@
             $user = $_POST['usuario'];
             $pass = $_POST['password'];
             //Definimos la consulta sql y la ejecutamos
-            $sql = "select login_name, id_estado, id_rol from almacen.usuario where login_name = '$user' and password = '$pass'";
+            $sql = "select login_name, id_estado, id_rol from alumnos.usuario where login_name = '$user' and password = '$pass'";
             $resultado = mysqli_query($conexion, $sql);
             //Validamos el resultado de la consulta
             if(!$resultado){ 
